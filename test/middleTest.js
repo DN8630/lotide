@@ -1,22 +1,28 @@
+const assert = require('chai').assert;
 const middle = require("../middle");
-const assertArrayEqual = require("../assertArraysEqual");
-//Test Case 1
-let inputArray = [1,2,3,4,5];
-let result = middle(inputArray);
-assertArrayEqual(result,[3]);
-//Test case with empty array input
-inputArray = [];
-result = middle(inputArray);
-assertArrayEqual(result,[]);
-//Test case with 1 array input
-inputArray = [5];
-result = middle(inputArray);
-assertArrayEqual(result,[]);
-//Test case with 2 array input
-inputArray = [5,7];
-result = middle(inputArray);
-assertArrayEqual(result,[]);
-//Test case with even 4array input
-inputArray = [1,5,7,8];
-result = middle(inputArray);
-assertArrayEqual(result,[5,6]);
+describe("#middle", () => {
+  it("returns 3 for [1,2,3,4,5]", () =>
+  {
+    assert.deepEqual(middle([1,2,3,4,5]),[3]);
+  });
+  it("returns [] for []", () =>
+  {
+    assert.deepEqual(middle([]),[]);
+  });
+  it("returns [] for [3]", () =>
+  {
+    assert.deepEqual(middle([3]),[]);
+  });
+  it("returns ['Lighthouse'] for ['Yo-yo','Lighthouse','Labs]", () =>
+  {
+    assert.deepEqual(middle(['Yo-yo','Lighthouse','Labs']),['Lighthouse']);
+  });
+  it("returns [] for [1,3]", () =>
+  {
+    assert.deepEqual(middle([1,3]),[]);
+  });
+  it("returns [5,7] for [1,5,7,8]", () =>
+  {
+    assert.deepEqual(middle([1,5,7,8]),[5,7]);
+  });
+})
