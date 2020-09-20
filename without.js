@@ -12,7 +12,7 @@ const eqArray = function(firstArray, secondArray) {
   }
 };
 
-const assertArraysEqual = function(firstArr,secondArr) {
+const assertArrayEqual = function(firstArr,secondArr) {
   if (eqArray(firstArr,secondArr) === true) {
     console.log(`✅✅ Assertion Passed! [${firstArr}] === [${[secondArr]}]`);
   } else {
@@ -39,9 +39,11 @@ const without = function(source,itemsToRemove) {
 
 const words = ["hello", "world", "lighthouse"];
 const newWords = without(words, ["lighthouse"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-assertArraysEqual(newWords, ["hello", "world", "lighthouse"]);
+assertArrayEqual(words, ["hello", "world", "lighthouse"]);
+assertArrayEqual(newWords, ["hello", "world", "lighthouse"]);
 const array = [1,2,3,4];
 const newArray = without(array, [1,2]);
-assertArraysEqual(array, [1,2,3,4]);
-assertArraysEqual(newArray, [1,2,3,4]);
+assertArrayEqual(array, [1,2,3,4]);
+assertArrayEqual(newArray, [1,2,3,4]);
+
+module.exports = without;

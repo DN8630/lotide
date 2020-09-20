@@ -17,6 +17,7 @@ const countLetters = function(sentString) {
   }
   return result;
 };
+module.exports = countLetters;
 
 const sentence = "Lighthouse in the house";
 const inputString = sentence.split(' ').join("").toLowerCase();

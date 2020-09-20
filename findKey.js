@@ -19,7 +19,7 @@ const findKey = function(obj, callback) {
 
 };
 
-
+module.exports = findKey;
 
 // Test cases
 const results = findKey({

@@ -31,6 +31,7 @@ const map = function(array, callback) {
   return results;
 
 };
+module.exports = map;
 // Test cases
 const results1 = map(words, word => word[0]);
 assertArrayEqual(results1,["g","c","t","m","t"]);
